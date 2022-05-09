@@ -3,7 +3,7 @@
 **1. Orientação a Objetos**
 
 - [x] Kotlin: Primeiros passos e Orientação a Objetos [10h]
-- [ ] Kotlin: Herança, Polimorfismo e Interface [10h]
+- [x] Kotlin: Herança, Polimorfismo e Interface [10h]
 - [ ] Kotlin: Recursos da linguagem com pacotes e composição [8h]
 - [ ] Kotlin: Conhecendo a classe Number
 - [ ] Kotlin: Conhecendo a classe String
