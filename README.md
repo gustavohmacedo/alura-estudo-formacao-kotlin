@@ -6,7 +6,7 @@
 - [x] Kotlin: Herança, Polimorfismo e Interface [10h]
 - [x] Kotlin: Recursos da linguagem com pacotes e composição [8h]
 - [x] Kotlin: Conhecendo a classe Number
-- [ ] Kotlin: Conhecendo a classe String
+- [x] Kotlin: Conhecendo a classe String
 - [ ] Kotlin: Data class
 - [ ] Kotlin: Lidando com exceptions e refências nulas [8h]
 
