@@ -1,6 +1,5 @@
 package br.com.alura.bytebank.exemplos_testes
 
-
 fun main() {
     val nome = "Gustavo"
     val sobrenome = "Henrique"

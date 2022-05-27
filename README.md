@@ -7,7 +7,7 @@
 - [x] Kotlin: Recursos da linguagem com pacotes e composição [8h]
 - [x] Kotlin: Conhecendo a classe Number
 - [x] Kotlin: Conhecendo a classe String
-- [ ] Kotlin: Data class
+- [x] Kotlin: Data class
 - [ ] Kotlin: Lidando com exceptions e refências nulas [8h]
 
  **2. Coleções e recursos do funcional**
