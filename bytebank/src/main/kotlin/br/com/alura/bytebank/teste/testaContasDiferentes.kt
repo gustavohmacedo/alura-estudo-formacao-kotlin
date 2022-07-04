@@ -1,9 +1,6 @@
 package br.com.alura.bytebank.teste
 
-import br.com.alura.bytebank.modelo.Cliente
-import br.com.alura.bytebank.modelo.ContaCorrente
-import br.com.alura.bytebank.modelo.ContaPoupanca
-import br.com.alura.bytebank.modelo.Endereco
+import br.com.alura.bytebank.modelo.*
 
 fun testaContasDiferentes() {
     val contaCorrente = ContaCorrente(
@@ -53,4 +50,19 @@ fun testaContasDiferentes() {
     println("Saldo C/P: ${contaPoupanca.saldo}")
     contaPoupanca.saca(100.0)
     println("Saldo após saque - C/P: ${contaPoupanca.saldo}")
+
+    contaCorrente.transfere(contaDestino = contaPoupanca, valor = 1500.0, senha = 1111)
+
+    val contaSalario = ContaSalario(
+        titular = Cliente(
+            nome = "Joelma Leite",
+            cpf = "123.456.789-10",
+            senha = 2222
+        ),
+        numero = 253512
+    )
+
+    contaSalario.deposita(valor = -15.0)
+    println("Saldo C/S: ${contaSalario.saldo}")
+
 }

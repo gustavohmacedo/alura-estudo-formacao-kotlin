@@ -1,11 +1,14 @@
 package br.com.alura.bytebank.teste
 
+import br.com.alura.bytebank.exception.FalhaAutenticacaoException
+import br.com.alura.bytebank.exception.SaldoInsuficienteException
+import br.com.alura.bytebank.exception.ValorInvalidoException
 import br.com.alura.bytebank.modelo.Cliente
 import br.com.alura.bytebank.modelo.ContaCorrente
 import br.com.alura.bytebank.modelo.ContaPoupanca
 
 fun testaComportamentosConta() {
-    val contaGustavo = ContaCorrente(
+    val contaCorrente = ContaCorrente(
         titular = Cliente(
             nome = "Gustavo",
             cpf = "777.777.777-77",
@@ -13,11 +16,11 @@ fun testaComportamentosConta() {
         ),
         numero = 1000
     )
-    contaGustavo.deposita(-550.0)
-    println(contaGustavo)
+    contaCorrente.deposita(139.70)
+    println(contaCorrente)
     println()
 
-    val contaPeter = ContaPoupanca(
+    val contaPoupanca = ContaPoupanca(
         titular = Cliente(
             nome = "Peter",
             cpf = "999.999.999-99",
@@ -25,17 +28,32 @@ fun testaComportamentosConta() {
         ),
         numero = 1001
     )
-    contaPeter.deposita(600.0)
-    println(contaPeter)
+    contaPoupanca.deposita(valor = 600.0)
+    println(contaPoupanca)
     println()
 
-    contaGustavo.deposita(50.0)
-    println("${contaGustavo.titular.nome} contém o saldo na conta de R$ ${contaGustavo.saldo}")
+    contaCorrente.deposita(valor = 50.0)
+    println("${contaCorrente.titular.nome} contém o saldo na conta de R$ ${contaCorrente.saldo}")
 
-    contaGustavo.saca(10.0)
-    println("${contaGustavo.titular.nome} contém o saldo na conta de R$ ${contaGustavo.saldo}")
+    contaCorrente.saca(valor = 10.0)
+    println("${contaCorrente.titular.nome} contém o saldo na conta de R$ ${contaCorrente.saldo}")
 
-    contaGustavo.transfere(contaPeter, 39.0)
-    println("${contaGustavo.titular.nome} contém o saldo na conta de R$ ${contaGustavo.saldo}")
-    println("${contaPeter.titular.nome} contém o saldo na conta de R$ ${contaPeter.saldo}")
+    try {
+        contaCorrente.transfere(contaDestino = contaPoupanca, valor = 139.3, senha = 1213)
+        println("${contaCorrente.titular.nome} contém o saldo na conta de R$ ${Math.round(contaCorrente.saldo)}")
+        println("${contaPoupanca.titular.nome} contém o saldo na conta de R$ ${Math.round(contaPoupanca.saldo)}")
+        println("Transferência realizada com sucesso!")
+    } catch (e: FalhaAutenticacaoException) {
+        println("Falha na autenticação")
+        println("Falha na transfência")
+        e.printStackTrace()
+    } catch (e: SaldoInsuficienteException) {
+        e.printStackTrace()
+    } catch (e: ValorInvalidoException) {
+        e.printStackTrace()
+    } catch (e: Exception) {
+        println("Erro desconhecido")
+        e.printStackTrace()
+    }
+
 }
