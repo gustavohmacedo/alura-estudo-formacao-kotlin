@@ -8,7 +8,7 @@
 - [x] Kotlin: Conhecendo a classe Number
 - [x] Kotlin: Conhecendo a classe String
 - [x] Kotlin: Data class
-- [ ] Kotlin: Lidando com exceptions e refências nulas [8h]
+- [x] Kotlin: Lidando com exceptions e refências nulas [8h]
 
  **2. Coleções e recursos do funcional**
 
