@@ -12,7 +12,7 @@
 
  **2. Coleções e recursos do funcional**
 
-- [ ] Kotlin: Desenvolva com coleções, arrays e listas [10h]
+- [x] Kotlin: Desenvolva com coleções, arrays e listas [10h]
 
 - [ ] Kotlin: Collections: Set e Map [8h]
 
