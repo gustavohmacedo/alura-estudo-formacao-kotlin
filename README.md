@@ -14,6 +14,6 @@
 
 - [x] Kotlin: Desenvolva com coleções, arrays e listas [10h]
 
-- [ ] Kotlin: Collections: Set e Map [8h]
+- [x] Kotlin: Collections: Set e Map [8h]
 
 - [ ] Kotlin: Recursos do paradigma funciona [12h]
