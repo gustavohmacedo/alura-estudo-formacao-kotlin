@@ -5,7 +5,7 @@ class Analista(
     cpf: String,
     salario: Double,
     val plr: Double
-) : br.com.alura.bytebank.modelo.Funcionario(nome = nome, cpf = cpf, salario = salario) {
+) : Funcionario(nome = nome, cpf = cpf, salario = salario) {
 
     override fun bonificacao(): Double = (salario * 0.15) + plr
 

@@ -16,4 +16,4 @@
 
 - [x] Kotlin: Collections: Set e Map [8h]
 
-- [ ] Kotlin: Recursos do paradigma funciona [12h]
+- [x] Kotlin: Recursos do paradigma funcional [12h]
